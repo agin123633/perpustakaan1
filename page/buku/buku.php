@@ -1,8 +1,8 @@
 <div class="row">
-                <div class="col-md-12">
-                    <!-- Advanced Tables -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
                              Advanced Tables
                         </div>
                         <div class="panel-body">
@@ -29,17 +29,24 @@
 
                                         ?>
 
-                                    <tr>
-                                        <td><?php echo $no++; ?></td>
-                                        <td><?php echo $data['judul'] ?></td>
-                                        <td><?php echo $data['pengarang'] ?></td>
-                                        <td><?php echo $data['penerbit'] ?></td>
-                                        <td><?php echo $data['isbn'] ?></td>
-                                        <td><?php echo $data['jumlah_buku'] ?></td>
-                                        <td>
-                                            <a href="" class="btn btn-info" >Ubah</a>
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td><?php echo $no++; ?></td>
+                                            <td><?php echo $data['judul'] ?></td>
+                                            <td><?php echo $data['pengarang'] ?></td>
+                                            <td><?php echo $data['penerbit'] ?></td>
+                                            <td><?php echo $data['isbn'] ?></td>
+                                            <td><?php echo $data['jumlah_buku'] ?></td>
+                                            <td>
+                                                <a href="" class="btn btn-info" >Ubah</a>
+                                                <a href="" class="btn btn-info" >Hapus</a>
+                                            </td>
+                                        </tr>
 
                                             <?php } ?>
-</tbody>
+                                    </tbody>       
+                                
+                            </div>
+                        </div>
+        </div>
+    </div>           
+</div>
