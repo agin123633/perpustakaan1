@@ -1,9 +1,11 @@
+<?php error_reporting(E_ALL ^ (E_NOTICE | E_WARNING)); ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <title>Perpustakaan</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -23,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Binary admin</a> 
+                <a class="navbar-brand" href="index.php">Perpustakaan</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -60,22 +62,33 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                
             </div>
             
-        </nav>  
+        </nav>
+
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+
                         <?php 
 
                             $page = $_GET['page'];
                             $aksi = $_GET['aksi'];
 
-                            if ($page == "buku"){
-                            if ($aksi == ""){
-                            include "page/buku/buku.php";
-                        }
-                        }
+                            if ($page == "anggota"){
+                                if ($aksi == ""){
+                                    include "page/anggota/anggota.php";
+                                }
+                            }elseif ($page == "buku"){
+                                if ($aksi == ""){
+                                    include "page/buku/buku.php";
+                                }
+                            }elseif ($page == "transaksi") {
+                                if ($aksi == ""){
+                                    include "page/transaksi/transaksi.php";
+                                }
+                            }
+                    
                         ?>
                        
                     </div>
