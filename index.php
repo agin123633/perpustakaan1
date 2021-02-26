@@ -84,13 +84,15 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                             $page = $_GET['page'];
                             $aksi = $_GET['aksi'];
 
-                            if ($page == "anggota"){
-                                if ($aksi == ""){
-                                    include "page/anggota/anggota.php";
-                                }
-                            }elseif ($page == "buku"){
+                            if ($page == "buku"){
                                 if ($aksi == ""){
                                     include "page/buku/buku.php";
+                                }elseif ($aksi == "tambah"){
+                                    include "page/buku/tambah.php";
+                                }   
+                            }elseif ($page == "anggota"){
+                                if ($aksi == ""){
+                                    include "page/anggota/anggota.php";
                                 }
                             }elseif ($page == "transaksi") {
                                 if ($aksi == ""){
