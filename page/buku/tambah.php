@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <label>Tanggal Input</label>
-                            <input class="form-control" type="number" name="tanggal" type="date" />
+                            <input class="form-control" name="tanggal" type="date" />
                         </div>
                         <div>
                             <input type="submit" name="simpan" value="simpan" class="btn btn-primary">
