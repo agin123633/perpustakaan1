@@ -83,6 +83,7 @@ if ($simpan) {
 
         <script type="text/javascript">
         alert ("Data Berhasil Disimpan");
+        window.location.href="?page=buku";
         </script>
         <?php
     }
