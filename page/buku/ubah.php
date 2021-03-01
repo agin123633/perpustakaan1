@@ -3,6 +3,7 @@
     $sql = $koneksi->query("SELECT * FROM tb_buku where id='$id'");
     $tampil = $sql->fetch_assoc(); 
     $tahun2 = $tampil['tahun_terbit'];
+    $lokasi = $tampil['lokasi'];
 ?>
 
 <!-- Form Elements -->
@@ -58,17 +59,17 @@
                         <div class="form-group">
                             <label>Lokasi</label>
                             <select class="form-control" name="lokasi">
-                                <option value="rak1">Rak 1</option>
-                                <option value="rak2">Rak 2</option>
-                                <option value="rak3">Rak 3</option>
+                                <option value="rak1" <?php if ($lokasi=='rak1') {echo "selected";}?>>Rak 1</option>
+                                <option value="rak2" <?php if ($lokasi=='rak2') {echo "selected";}?>>Rak 2</option>
+                                <option value="rak3" <?php if ($lokasi=='rak3') {echo "selected";}?>>Rak 3</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Input</label>
-                            <input class="form-control" name="tanggal" type="date" />
-                        </div>
+                            <input class="form-control" name="tanggal" type="date" value="<?php echo  $tampil['tgl_input'];?>"/>
+                        </div>  
                         <div>
-                            <input type="submit" name="simpan" value="simpan" class="btn btn-primary">
+                            <input type="submit" name="simpan" value="ubah" class="btn btn-primary">
                             </div>
                 </div>
                             </form>
@@ -91,7 +92,7 @@ $tanggal = $_POST ['tanggal'];
 $simpan = $_POST ['simpan'];
 
 if ($simpan) {
-    $sql = $koneksi->query("insert into tb_buku (judul, pengarang, penerbit, tahun_terbit, isbn, jumlah_buku, lokasi, tgl_input) values('$judul','$pengarang','$penerbit','$tahun','$isbn','$jumlah','$lokasi','$tanggal')");
+    $sql = $koneksi->query("update tb_buku set judul='$judul', pengarang='$pengarang', penerbit='$penerbit', tahun_terbit='$tahun', isbn='$isbn', jumlah_buku='$jumlah', lokasi='$lokasi', tgl_input='$tanggal' where id='$id'");
     
     if ($sql) {
         ?>
