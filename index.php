@@ -99,6 +99,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                                     include "page/anggota/anggota.php";
                                 }elseif ($aksi == "tambah"){
                                     include "page/anggota/tambah.php";
+                                }elseif ($aksi == "ubah"){
+                                    include "page/anggota/ubah.php";
                                 }
                             }elseif ($page == "transaksi") {
                                 if ($aksi == ""){
