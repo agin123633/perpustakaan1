@@ -9,14 +9,17 @@
                             <label>NIM</label>
                             <input class="form-control" name="nim" />
                         </div>
+
                         <div class="form-group">
                             <label>Nama</label>
                             <input class="form-control" name="nama" />
                         </div>
+
                         <div class="form-group">
                             <label>Tempat Lahir</label>
                             <input class="form-control" name="tempat_lahir" />
                         </div>
+
                         <div class="form-group">
                             <label>Tanggal Lahir</label>
                             <input class="form-control" type="date" name="tgl_lahir" />
@@ -33,40 +36,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Tahun Terbit</label>
-                            <select class="form-control" name="tahun">
-                                <?php
-
-                                $tahun = date("Y");
-                                for ($i=$tahun-29; $i <= $tahun; $i++) { 
-                                    echo'
-                                    <option value="'.$i.'">'.$i.'</option>
-                                    ';
-                                }
-
-                                ?>
+                            <label>Program Studi</label>
+                            <select class="form-control" name="prodi">
+                                <option value="ti">Teknik Informatika</option>
+                                <option value="si">sistem nformasi</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>ISBN</label>
-                            <input class="form-control" name="isbn" />
-                        </div>
-                        <div class="form-group">
-                            <label>Jumlah Buku</label>
-                            <input class="form-control" type="number" name="jumlah" />
-                        </div>
-                        <div class="form-group">
-                            <label>Lokasi</label>
-                            <select class="form-control" name="lokasi">
-                                <option value="rak1">Rak 1</option>
-                                <option value="rak2">Rak 2</option>
-                                <option value="rak3">Rak 3</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Tanggal Input</label>
-                            <input class="form-control" name="tanggal" type="date" />
-                        </div>
+                        
                         <div>
                             <input type="submit" name="simpan" value="simpan" class="btn btn-primary">
                             </div>
@@ -80,25 +56,22 @@
 
 <?php
 
-$judul = $_POST ['judul'];
-$pengarang = $_POST ['pengarang'];
-$penerbit = $_POST ['penerbit'];
-$tahun = $_POST ['tahun'];
-$isbn = $_POST ['isbn'];
-$jumlah = $_POST ['jumlah'];
-$lokasi = $_POST ['lokasi'];
-$tanggal = $_POST ['tanggal'];
+$nim = $_POST ['nim'];
+$nama = $_POST ['nama'];
+$tempat_lahir = $_POST ['tempat_lahir'];
+$tgl_lahir = $_POST ['tgl_lahir'];
+$jk = $_POST ['jk'];
+$prodi = $_POST ['prodi'];
 $simpan = $_POST ['simpan'];
-
 if ($simpan) {
-    $sql = $koneksi->query("insert into tb_buku (judul, pengarang, penerbit, tahun_terbit, isbn, jumlah_buku, lokasi, tgl_input) values('$judul','$pengarang','$penerbit','$tahun','$isbn','$jumlah','$lokasi','$tanggal')");
+    $sql = $koneksi->query("insert into tb_anggota (nim, nama, tempat_lahir, tgl_lahir, jk, prodi) values('$nim','$nama','$tempat_lahir','$tgl_lahir','$jk','$prodi')");
     
     if ($sql) {
         ?>
 
         <script type="text/javascript">
         alert ("Data Berhasil Disimpan");
-        window.location.href="?page=buku";
+        window.location.href="?page=anggota";
         </script>
         <?php
     }
