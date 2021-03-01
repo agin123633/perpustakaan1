@@ -13,6 +13,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Nim</th>
                                             <th>Nama</th>
                                             <th>Tempat Lahir</th>
                                             <th>Tanggal Lahir</th>
@@ -35,14 +36,15 @@
 
                                         <tr>
                                             <td><?php echo $no++; ?></td>
+                                            <td><?php echo $data['nim'] ?></td>
                                             <td><?php echo $data['nama'] ?></td>
                                             <td><?php echo $data['tempat_lahir'] ?></td>
                                             <td><?php echo $data['tgl_lahir'] ?></td>
                                             <td><?php echo $jk ?></td>
                                             <td><?php echo $prodi ?></td>
                                             <td>
-                                                <a href="?page=buku&aksi=ubah&id=<?php echo $data['id']; ?>" class="btn btn-info" >Ubah</a>
-                                                <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="?page=buku&aksi=hapus&id=<?php echo $data['id']; ?>" class="btn btn-info" >Hapus</a>
+                                                <a href="?page=anggota&aksi=ubah&id=<?php echo $data['nim']; ?>" class="btn btn-info" >Ubah</a>
+                                                <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['id']; ?>" class="btn btn-danger" >Hapus</a>
                                             </td>
                                         </tr>
 
