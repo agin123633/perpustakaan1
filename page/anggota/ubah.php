@@ -7,8 +7,8 @@
 ?>
 
 <!-- Form Elements -->
-<div class="panel panel-default">
-    <div class="panel-heading">Tambah Data</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Ubah Data Anggota</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-12">
@@ -82,7 +82,7 @@ if ($simpan) {
         ?>
 
         <script type="text/javascript">
-        alert ("Data Berhasil Disimpan");
+        alert ("Data Berhasil Diubah");
         window.location.href="?page=anggota";
         </script>
         <?php
