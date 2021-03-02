@@ -1,9 +1,9 @@
-<a href="?page=buku&aksi=tambah" class="btn btn-primary" style="margin-bottom: 5px;">Tambah Buku</a>
+<a href="?page=buku&aksi=tambah" class="btn btn-success" style="margin-bottom: 5px;"><i class="fa fa-plus"></i> Tambah Buku</a>
 
 <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
             <div class="panel-heading">
                              Data Buku
                         </div>
