@@ -1,6 +1,6 @@
 <!-- Form Elements -->
-<div class="panel panel-default">
-    <div class="panel-heading">Tambah Data</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Tambah Buku</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-12">
