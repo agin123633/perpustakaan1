@@ -1,11 +1,11 @@
-<a href="?page=anggota&aksi=tambah" class="btn btn-primary" style="margin-bottom: 5px;">Tambah Data</a>
+<a href="?page=anggota&aksi=tambah" class="btn btn-success" style="margin-bottom: 5px;"><i class="fa fa-plus"></i> Tambah Data</a>
 
 <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
             <div class="panel-heading">
-                             Data Buku
+                             Data Anggota
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -44,7 +44,7 @@
                                             <td><?php echo $prodi ?></td>
                                             <td>
                                                 <a href="?page=anggota&aksi=ubah&id=<?php echo $data['nim']; ?>" class="btn btn-info" >Ubah</a>
-                                                <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['id']; ?>" class="btn btn-danger" >Hapus</a>
+                                                <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="?page=anggota&aksi=hapus&id=<?php echo $data['nim']; ?>" class="btn btn-danger" >Hapus</a>
                                             </td>
                                         </tr>
 
