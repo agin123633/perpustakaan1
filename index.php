@@ -1,5 +1,7 @@
 <?php
 
+include  "function.php";
+
 $koneksi = new mysqli ("localhost","root","","db_perpustakaan")
 
 ?>
@@ -101,10 +103,14 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                                     include "page/anggota/tambah.php";
                                 }elseif ($aksi == "ubah"){
                                     include "page/anggota/ubah.php";
+                                }elseif ($aksi == "hapus"){
+                                    include "page/anggota/hapus.php";
                                 }
                             }elseif ($page == "transaksi") {
                                 if ($aksi == ""){
                                     include "page/transaksi/transaksi.php";
+                                }elseif ($aksi == "tambah"){
+                                    include "page/transaksi/tambah.php";
                                 }
                             }
                     
