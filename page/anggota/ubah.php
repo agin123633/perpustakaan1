@@ -36,14 +36,10 @@
                         <div class="form-group">
                             <label>Jenis Kelamin</label><br/>
                             <label class="checkbox-inline">
-                                <Input type="checkbox" value="l" name="jk" <?php if ($jk==l){
-                                    echo "selected";
-                                } ?>/> Laki-laki
+                                <Input type="checkbox" value="l" name="jk" <?php echo($jkl==l)?"checked":"";?>/> Laki-laki
                             </label>
                             <label class="checkbox-inline">
-                                <Input type="checkbox" value="p" name="jk" <?php if ($jk==p){
-                                    echo "selected";
-                                } ?>/>Perempuan
+                                <Input type="checkbox" value="p" name="jk" <?php echo($jkl==p)?"checked":"";?>/>Perempuan
                             </label>
                         </div>
 
@@ -80,7 +76,7 @@ $jk = $_POST ['jk'];
 $prodi = $_POST ['prodi'];
 $simpan = $_POST ['simpan'];
 if ($simpan) {
-    $sql = $koneksi->query("insert into tb_anggota (nim, nama, tempat_lahir, tgl_lahir, jk, prodi) values('$nim','$nama','$tempat_lahir','$tgl_lahir','$jk','$prodi')");
+    $sql = $koneksi->query("update tb_anggota set nama='$nama', tempat_lahir='$tempat_lahir', tgl_lahir='$tgl_lahir', jk='$jk', prodi='$prodi' where nim='$nim'");
     
     if ($sql) {
         ?>
