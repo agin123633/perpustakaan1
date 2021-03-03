@@ -111,6 +111,10 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                                     include "page/transaksi/transaksi.php";
                                 }elseif ($aksi == "tambah"){
                                     include "page/transaksi/tambah.php";
+                                }elseif ($aksi == "kembali"){
+                                    include "page/transaksi/kembali.php";
+                                }elseif ($aksi == "perpanjang"){
+                                    include "page/transaksi/perpanjang.php";
                                 }
                             }
                     
