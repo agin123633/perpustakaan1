@@ -51,6 +51,9 @@
                         <a href="?page=anggota&aksi=tambah" class="btn btn-success" style="margin-top: 8px;"><i class="fa fa-plus"></i> Tambah Data</a>
                         
                         <a href="./laporan/laporan_anggota_excel.php" target="blank" class="btn btn-default" style="margin-top: 8px;"><i class="fa fa-print"></i>Export to Excel</a>
+
+                        <a href="./laporan/laporan_anggota_pdf.php" target="blank" class="btn btn-default" style="margin-top: 8px;"><i class="fa fa-print"></i>Export to PDf</a>
+                    
                     </div>
         </div>
     </div> 
