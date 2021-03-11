@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+ob_start();
+session_start();
 include  "function.php";
 
 $koneksi = new mysqli ("localhost","root","","db_perpustakaan")
